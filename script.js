@@ -42,16 +42,20 @@ const features = [
 var feature_elements = [];
 var current = 0;
 
+var width = Math.floor(window.innerWidth*.5);
+if(window.innerWidth < window.innerHeight){
+	width = Math.floor(window.innerWidth*.6);
+}
+
 for(var i=0; i<features.length; i++){
-	var width = Math.floor(screen.width*.6);
-	var position = ((screen.width/2)-(width/2)) + ((width+40)*i);
+	var position = ((window.innerWidth/2)-(width/2)) + (width*i);
 	
 	var d = document.createElement("div");
 	d.id = "product"+(i+1);
 	
 	d.style.width = width+"px";
 	d.style.height = (width*.6)+"px";
-	d.style.backgroundColor = rndmRGB(0.5);
+	//d.style.backgroundColor = rndmRGB(0.5);
 	d.style.position = "absolute";
 	d.style.left = position+"px";
 	d.style.top = "180px";
@@ -70,8 +74,8 @@ for(var i=0; i<features.length; i++){
 		inside.style.width = "100%";
 		inside.style.height = "100%";
 	}else{
-		inside.style.width = "80%";
-		inside.style.height = "80%";
+		inside.style.width = "60%";
+		inside.style.height = "60%";
 	}
 	inside.style.transition = "width 1s, height 1s";
 	inside.style.backgroundColor = rndmRGB(1);
@@ -90,17 +94,17 @@ function overFeature(n){
 		for(var i=0; i<features.length; i++){
 			var elem_left = parseInt(feature_elements[i][0].style.left.replace("px"));
 			var elem_width = parseInt(feature_elements[i][0].style.width.replace("px"));
-			feature_elements[i][0].style.left = (elem_left-elem_width-40)+"px";
-			feature_elements[i][1].style.width = "80%";
-			feature_elements[i][1].style.height = "80%";
+			feature_elements[i][0].style.left = (elem_left-elem_width)+"px";
+			feature_elements[i][1].style.width = "60%";
+			feature_elements[i][1].style.height = "60%";
 		}
 	}else if(current > n){
 		for(var i=0; i<features.length; i++){
 			var elem_left = parseInt(feature_elements[i][0].style.left.replace("px"));
 			var elem_width = parseInt(feature_elements[i][0].style.width.replace("px"));
-			feature_elements[i][0].style.left = (elem_left+elem_width+40)+"px";
-			feature_elements[i][1].style.width = "80%";
-			feature_elements[i][1].style.height = "80%";
+			feature_elements[i][0].style.left = (elem_left+elem_width)+"px";
+			feature_elements[i][1].style.width = "60%";
+			feature_elements[i][1].style.height = "60%";
 		}
 	}else{
 	}
