@@ -5,7 +5,8 @@
 	width: 100%;
 	height: 50px;
 	display: inline-block;
-	background-color: red;
+	z-index: 2;
+	background-color: #f84413;
 }
 
 .menu{
@@ -53,29 +54,64 @@
 }
 
 
-
-
-#bannerSections{
-	display: flex;
-	margin-top: 60px;
+#sideBar{
+	position: fixed;
+	left: -360px;
+	top: 50px;
+	width: 360px;
+	height: 100%;
+	z-index: 1;
+	background-color: #f84413;
+	transition: left 1s;
+}
+.mid{
+	margin-left: 30px;
+	width: 300px;
+	height: 90%;
+	/*border: 2px solid black;*/
+}
+.profile{
+	position: absolute;
+	width: 148px;
+	height: 148px;
+}
+.profile img{
+	position: absolute;
 	width: 100%;
-	height: 60px;
+	height: 100%;
+	object-fit: contain;
 }
-
-.section{
+.login{
+	position: absolute;
+	left: 196px;
+	top: 54px;
+	width: 100px;
+	padding: 10px;
 	text-align: center;
-	font-size: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-	width: calc(100% / 6);
-	padding: 0;
-	height: 32px;
-	border: 4px solid black;
-	border-radius: 10px 10px 10px 10px;
+	border: 2px solid black;
+	background-color: white;
 	cursor: pointer;
+	border-radius: 20px;
 }
-
-.section:hover{
-	margin-top: -5px;
-	border: 10px solid red;
+.links{
+	position: absolute;
+	top: 200px;
+	width: 300px;
+	height: auto;
+	/*border: 2px solid black;*/
+}
+.links a{
+	color: white;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	transition: margin-left .2s;
+}
+.links a:hover{
+	margin-left: 10px;
+}
+.mid p{
+	position: absolute;
+	font-size: 12px;
+	color: white;
+	top: 89%;
 }

@@ -3,20 +3,17 @@
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=0">
 	<title> ML LOUNGE </title>
-	<link rel="preload" href="icons/menu.svg">
-	<link rel="preload" href="icons/cart.svg">
-	<link rel="preload" href="icons/search.svg">
-	
+	<link rel="stylesheet" href="../../style.css">
+	<link rel="stylesheet" href="../../banner.css">
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="banner.css">
 </head>
 
 <body>
 	<div id="bannertop">
-		<img class="menu" src="icons/menu.svg" onclick="menu()"></img>
-		<img class="cart" src="icons/cart.svg" onclick="cart()"></img>
+		<img class="menu" src="../../icons/menu.svg" onclick="menu()"></img>
+		<img class="cart" src="../../icons/cart.svg" onclick="cart()"></img>
 		<div class="searchBar">
-			<img class="search" src="icons/search.svg" onclick="search()"></img>
+			<img class="search" src="../../icons/search.svg" onclick="search()"></img>
 			<input class="searchInput" type="text" name="email" placeholder="search"></input>
 		</div>
 	</div>
@@ -24,17 +21,17 @@
 	<div id="sideBar">
 		<div class="mid">
 			<div class="profile">
-				<img src="empty.png"></img>
-				<img src="basic.png"></img>
+				<img src="../../empty.png"></img>
+				<img src="../../basic.png"></img>
 			</div>
-			<div class="login" onclick="login()"> LOGIN </div>
+			<div class="login"> LOGIN </div>
 			
 			<table class="links">
 				<tr><th>
-						<a href="index.html" style="float:left;"> HOME </a>
+						<a href="../../index.html" style="float:left;"> HOME </a>
 				</th></tr>
 				<tr><th>
-						<a href="links/heroes/index.html" style="float:left;"> HEROES </a>
+						<a href="../heroes/index.html" style="float:left;"> HEROES </a>
 				</th></tr>
 				<tr><th>
 						<a href="#" style="float:left;"> TRADES </a>
@@ -61,29 +58,37 @@
 	</div>
 	
 	
-	<div id="icon"></div>
-	<div id="logo" style="width: 100%; height: 400px; margin-top: 100px; background-color:transparent; text-align: center; vertical-align: center;">\
-		<a href="links/heroes/index.html" style="float:left;"> HEROES </a>
-		<a href="#" style="float:left;"> TRADES </a>
-		<a href="#" style="float:right;"> SKINS </a>
-		<a href="#" style="float:right;"> EVENTS </a>
+	
+	
+	<div id="container_login">
+		<div class="mid">
+			<div class="icon_div">
+				<img src="../../empty.png"></img>
+			</div>
+			<div class="form_div">
+				<input class="input1 user" type="text" name="user" placeholder="username"/>
+				<input class="input1 pass" type="password" name="password" placeholder="password"/>
+				<input type="button" class="buttons1 logIn" value="LOGIN" onmouseup="login()"/>
+				<input type="button" class="buttons1 signUp" value="SINGUP" onmouseup="signup()"/>
+			</div>
+		</div>
+	</div>
+	<div id="container_signup">
+		<div class="mid">
+			<div class="form_div">
+				<input class="input2 user" type="text" name="username" placeholder="username"/>
+				<input class="input2 email" type="text" name="email" placeholder="email"/>
+				<input class="input2 id" type="text" name="id" placeholder="account id"/>
+				<input class="input2 pass" type="password" name="password" placeholder="password"/>
+				<input class="input2 passConfirm" type="password" name="passwordConfirm" placeholder="confirm password"/>
+				<input type="button" class="buttons2 logIn" value="LOGIN" onmouseup="login()"/>
+				<input type="button" class="buttons2 signUp" value="SINGUP" onmouseup="signup()"/>
+			</div>
+		</div>
 	</div>
 	
-	<div id="features">
-	</div>
-	
-	<div id="sports">
-		<div id="sports_container"></div>
-	</div>
-	
-	<div id="gaming">
-		<div id="gaming_container"></div>
-	</div>
 	
 	<div id="infos">
-		<br></br>
-		<br></br>
-		<br></br>
 		<p style="text-align: center; color: white;"> © 2020 Mobile Legends Lounge </p>
 		<p style="text-align: center; color: lightgreen; cursor: pointer;"> User Agreement </p>
 		<p style="text-align: center; color: lightgreen; cursor: pointer;"> Contacts </p>
@@ -95,9 +100,6 @@
 	</div>
 	
 	<script type="text/javascript" src="script.js"></script>
-	<script type="text/javascript" src="features/features.js"></script>
-	<script type="text/javascript" src="sports/sports.js"></script>
-	<script type="text/javascript" src="gaming/gaming.js"></script>
 	
 	
 </body>
